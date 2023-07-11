@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register | From</title>
+    <link rel="icon" href="assets/img/logo/bot.png" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/4-Column-Team-Block---Circles.css">
+    <link rel="stylesheet" href="assets/css/Account-setting-or-edit-profile.css">
+    <link rel="stylesheet" href="assets/css/Application-Form.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Ludens---Custom-Code-Google-Map-just-the-iframe.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---2-Register.css">
+    <link rel="stylesheet" href="assets/css/Profile-with-data-and-skills.css">
+    <link rel="stylesheet" href="assets/css/Projects-Grid-Horizontal.css">
+</head>
+
+<body>
+    <section class="register-photo" style="background-color: transparent;filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(246, 246, 246, 0.571).5);">
+        <div class="form-container" style="top: 50px; right:50px;">
+            <div class="image-holder" style="background: url(&quot;assets/img/30758.jpg&quot;) left / cover no-repeat;"></div>
+            <form method="post" action="afterRegister.html" style="height: 525px;">
+                <h2 class="text-center"><strong>Create a New Account..</strong><br></h2>
+                <div class="form-group mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div><script>
+    // Submit button made with javascript
+    function changePassword() {
+        var password = document.querySelector("#password").value;
+        var confirmPassword = document.querySelector("#confirmPassword").value;
+        
+        if(password.length >= 8) {
+            if(password === confirmPassword)
+            {
+                var btn = $('#submitButton').removeAttr("disabled");
+                document.querySelector('#passwordsError').style.display = 'none';
+                console.log("enabling")
+            }
+            else {
+                var btn = $('#submitButton').attr("disabled", "true");
+                document.querySelector('#passwordsError').style.display = 'block';
+                document.querySelector('#errorMessage').innerHTML = 'The passwords do not match';
+                console.log("disabling")
+            }
+        }
+        else {
+            var btn = $('#submitButton').attr("disabled", "true");
+            document.querySelector('#passwordsError').style.display = 'block';
+            document.querySelector('#errorMessage').innerHTML = 'The password must be at least 8 characters long';
+            console.log("disabling")
+        }
+    }
+</script>
+                <div class="form-group mb-3"><input class="form-control" type="password" id="password" name="password" placeholder="Passworld" onchange="changePassword()"></div>
+                <div class="form-group mb-3"><input class="form-control" type="password" id="confirmPassword" name="password-repeat" placeholder="Repetir Password" onchange="changePassword()"></div>
+                <div id="passwordsError" style="display: none;margin-bottom: 16.5px;"><span id="errorMessage" class="text-danger" style="font-size:13px;"></span></div>
+                <div class="form-group mb-3">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">agree you are registering this web ..</label></div>
+                </div>
+                <div class="form-group mb-3"><button class="btn btn-primary d-block w-100" id="submitButton" type="submit" style="color: rgb(255,255,255);background-color: #00b5a8;">Crear Account</button></div><a class="already" href="login.html"></a>
+            </form>
+        </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/creative.js"></script>
+    <script src="assets/js/Application-Form-1.js"></script>
+    <script src="assets/js/Application-Form.js"></script>
+    <script src="https://geodata.solutions/includes/countrystate.js"></script>
+</body>
+
+</html>
